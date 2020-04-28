@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-function Card() {
+function CardLoop() {
 
     return( <div></div>);
     }
     
-    export default Card
+    export default CardLoop
