@@ -1,0 +1,14 @@
+{
+  "janice12": {
+    "imageLocation": "../Assets/Images/1",
+    "ActiveChallenges": [{"0":"Sleep","1":"Reduce Mobile Usage","2":"TeamProject"}],
+    "Rewards":[{}],
+    "PastChallenges": [{"0":"Poop"}]
+  },
+  "tom": {
+    "imageLocation": "../Assets/Images/2",
+    "ActiveChallenges": [{"0":"Sleep","1":"Reduce Mobile Usage","2":"TeamProject"}],
+    "Rewards":[{}],
+    "PastChallenges": [{"0":"Poop"}]
+  }
+}
