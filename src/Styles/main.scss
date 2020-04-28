@@ -1,9 +1,10 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  @import "./partials/colors";
-  @import "./partials/fonts";
-  @import "./partials/breakpoints";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import "./partials/colors";
+@import "./partials/fonts";
+@import "./partials/breakpoints";
+@import "./partials/cards";
