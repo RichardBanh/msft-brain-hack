@@ -6,12 +6,10 @@ import "./Styles/main.css";
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
+    <div className="App">
+      <BrowserRouter>
         <div className="header">
-          <Link to="/" className="header__left">
-            <img className="header__left-home" alt="logo" />
-          </Link>
+          <Link to="/" className="header__left"></Link>
           <div className="header__right">
             <Link to="" className="header__right-link">
               <h3 className="header__right-item">Explore</h3>
@@ -27,7 +25,6 @@ function App() {
             </Link>
           </div>
         </div>
-
         <Categories />
         <Switch>
           <Route exact path="/">
