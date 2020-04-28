@@ -1,6 +1,6 @@
 import React from "react";
-import Catnap from "../Assets/Cards/SVG/Catnap.svg";
-import Progress from "../Assets/Cards/SVG/Progress.svg";
+import Catnap from "../Assets/Images/SVG/Catnap.svg";
+import Progress from "../Assets/Images/SVG/Progress.svg";
 
 function Categories() {
   return (
