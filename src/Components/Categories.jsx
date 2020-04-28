@@ -2,7 +2,7 @@ import React from "react";
 import Catnap from "../Assets/Cards/SVG/Catnap.svg";
 import Progress from "../Assets/Cards/SVG/Progress.svg";
 
-const Categories = () => {
+function Categories() {
   return (
     <div className="card">
       <img className="card__image" src={Catnap} alt="Coffee" />
