@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  &__left {
+    width: 5.3125rem;
+    height: 5rem;
+    background-color: #c4c4c4;
+    border-radius: 1.5rem;
+  }
+  &__right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &-link {
+      margin-left: 3.875rem;
+      color: #325075;
+      text-decoration: none;
+      font-family: "roboto-regular";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 17px;
+      line-height: 20px;
+    }
+    &-item {
+    }
+  }
+}
