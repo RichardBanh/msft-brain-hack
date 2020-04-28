@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 
-import "./App.css";
+import "./Styles/main.css";
 
 function App() {
   return (
