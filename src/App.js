@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
-
+import Homepage from './Components/Pages/Homepage'
 import "./Styles/main.css";
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path='/'>
-
+            <Homepage/>
           </Route>
         </Switch>
       </BrowserRouter>
