@@ -1,0 +1,18 @@
+@include large {
+  .card {
+    width: 25rem;
+    height: 20.625rem;
+    background-color: $color-lightblue;
+    &__image {
+      height: 13.125rem;
+    }
+    &__bottom {
+      &-title {
+      }
+      &-ending {
+      }
+      &-progress {
+      }
+    }
+  }
+}

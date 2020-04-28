@@ -23,4 +23,14 @@
 /* media query for mobile 320*/
 /* media query for tablet*/
 /* media query for high pixel density desktops*/
+@media only screen and (min-width: 1440px) {
+  .card {
+    width: 25rem;
+    height: 20.625rem;
+    background-color: #d6efff;
+  }
+  .card__image {
+    height: 13.125rem;
+  }
+}
 /*# sourceMappingURL=main.css.map */
