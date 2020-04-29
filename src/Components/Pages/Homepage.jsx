@@ -1,13 +1,14 @@
 import React, { useState } from "react";
-import CardLoop from "../CardLoop"
+import CardLoop from "../CardLoop";
 import Categories from "../Categories";
+import Suggested from "../Suggested";
 function Homepage() {
-
-    return (
-        <>
-            <Categories/>
-        </>
-    )
+  return (
+    <>
+      <Categories />
+      <Suggested />
+    </>
+  );
 }
 
-export default Homepage
+export default Homepage;
