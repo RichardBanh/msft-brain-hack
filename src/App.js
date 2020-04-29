@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import Homepage from "./Components/Pages/Homepage";
-
-import Header from "./Components/Header";
+import ChallengeDetails from "./Components/Pages/ChallengeDetails"
+import Header from "./Components/Header"
 import "./Styles/main.css";
 
 function App() {
@@ -14,6 +14,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Homepage />
+          </Route>
+          <Route>
+            
           </Route>
         </Switch>
       </div>
@@ -27,3 +30,6 @@ export default App;
 //sorting function?
 //write await?
 // fs.readFile
+
+
+//useparams
