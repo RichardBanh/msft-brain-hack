@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import Homepage from "./Components/Pages/Homepage";
 import ChallengeDetails from "./Components/Pages/ChallengeDetails"
-import Profile from "./Components/Pages/Profile"
+import PersonalPage from "./Components/Pages/PersonalPage"
 import Header from "./Components/Header"
 import "./Styles/main.css";
 
@@ -19,8 +19,8 @@ function App() {
           <Route path="/ChallengeDetails">
             <ChallengeDetails/> 
           </Route>
-          <Route path="/Profile">
-            <Profile/>
+          <Route path="/PersonalPage">
+            <PersonalPage/>
           </Route>
         </Switch>
       </div>
