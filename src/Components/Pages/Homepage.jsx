@@ -10,11 +10,10 @@ function Homepage(props) {
   if(!props.userdata) {
     return <div>Loading!</div>
   } else {
- console.log(props.userdata)
   return (
     <>
       <h3>My Challenges in Process</h3>
-      <MyChallenges />
+      <MyChallenges userdata={props.userdata} />
       <h3>Suggested Challenges</h3>
       <Suggested />
       <h3>Popular Challenges</h3>
