@@ -1,9 +1,12 @@
-import React, { Component } from 'react';
+import React from "react";
+import Categories from "../../Assets/Images/SVG/Categories.svg";
 
-function Categories() {
-    return (<>
-        <div>Categories Component</div>
-    </>)
-}
+const BotCategory = () => {
+  return (
+    <div className="cat">
+      <img className="cat__image" src={Categories} alt="Categories" />
+    </div>
+  );
+};
 
-export default Categories;
+export default BotCategory;
