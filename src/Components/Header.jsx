@@ -7,16 +7,16 @@ const Header = () => {
       <Link to="/" className="header__left"></Link>
       <div className="header__right">
         <Link to="" className="header__right-link">
-          <h3 className="header__right-item">Explore</h3>
+          <div className="header__right-item">Explore</div>
         </Link>
         <Link to="" className="header__right-link">
-          <h3 className="header__right-item">My Challenges</h3>
+          <div className="header__right-item">My Challenges</div>
         </Link>
         <Link to="" className="header__right-link">
-          <h3 className="header__right-item">My Profile</h3>
+          <div className="header__right-item">My Profile</div>
         </Link>
         <Link to="" className="header__right-link">
-          <h3 className="header__right-item">Sign Out</h3>
+          <div className="header__right-item">Sign Out</div>
         </Link>
       </div>
     </div>
