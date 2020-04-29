@@ -72,6 +72,16 @@
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.card__title {
+  font-family: "roboto-regular";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 37px;
+  color: #009ffd;
+  margin: 118px 0 20px;
+}
+
 .card__image {
   height: 13.125rem;
 }
@@ -94,6 +104,97 @@
 
 .card__bottom-progress {
   margin: 1rem 0 1.125rem;
+}
+
+.suggested {
+  width: 400px;
+  height: 19.3125rem;
+  font-family: "roboto-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.suggested__title {
+  font-family: "roboto-regular";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 37px;
+  margin: 110px 0 18px 6px;
+  color: #009ffd;
+}
+
+.suggested__category {
+  color: #2af6b9;
+  position: relative;
+  display: inline-block;
+}
+
+.suggested__category-text {
+  position: absolute;
+  z-index: 999;
+  margin: 0 auto;
+  left: 1rem;
+  right: 0;
+  top: 10%;
+}
+
+.suggested__image {
+  margin-bottom: 14px;
+}
+
+.suggested__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 8px;
+}
+
+.suggested__bottom-title {
+  font-weight: bold;
+}
+
+.suggested__bottom-ending {
+  color: #009ffd;
+  font-weight: bold;
+  margin-bottom: 21px;
+}
+
+.suggested__bottom-button {
+  background: #dbeffe;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  width: 100px;
+  height: 50px;
+  border: none;
+  font-family: "roboto-regular";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  color: #325075;
+}
+
+.suggested__people-avatar {
+  height: 30px;
+  padding-left: 6px;
+}
+
+.cat__title {
+  font-family: "roboto-regular";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 37px;
+  color: #009ffd;
+  padding-bottom: 26px;
+  margin-top: 107px;
 }
 
 body {
