@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import Categories from "./Components/Categories";
 import Suggested from "./Components/Suggested";
+import Homepage from "./Components/Pages/Homepage";
 
 import "./Styles/main.css";
 
@@ -30,7 +31,7 @@ function App() {
         <Suggested />
         <Switch>
           <Route exact path="/">
-            {/* <Homepage /> */}
+            <Homepage />
           </Route>
         </Switch>
       </BrowserRouter>
