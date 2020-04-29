@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import Homepage from "./Components/Pages/Homepage";
 import ChallengeDetails from "./Components/Pages/ChallengeDetails"
+import Profile from "./Components/Pages/Profile"
 import Header from "./Components/Header"
 import "./Styles/main.css";
 
@@ -9,14 +10,17 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Header />
+        <Header /> 
 
         <Switch>
           <Route exact path="/">
-            <Homepage />
+            <Homepage /> 
           </Route>
-          <Route>
-            
+          <Route path="/ChallengeDetails">
+            <ChallengeDetails/> 
+          </Route>
+          <Route path="/Profile">
+            <Profile/>
           </Route>
         </Switch>
       </div>

@@ -1,8 +1,8 @@
 import React from "react";
-import Catnap from "../Assets/Images/SVG/Catnap.svg";
-import Progress from "../Assets/Images/SVG/Progress.svg";
+import Catnap from "../../Assets/Images/SVG/Catnap.svg";
+import Progress from "../../Assets/Images/SVG/Progress.svg";
 
-function Categories() {
+function MyChallenges() {
   return (
     <div className="card">
       <img className="card__image" src={Catnap} alt="Coffee" />
@@ -15,6 +15,6 @@ function Categories() {
   );
 };
 
-export default Categories;
+export default MyChallenges;
 
 //cardloop
