@@ -5,7 +5,12 @@ import Suggested from "../HomePageComp/Suggested";
 import Popular from "../HomePageComp/PopularSelct"
 import Categories from "../HomePageComp/Categories"
 
-function Homepage() {
+function Homepage(props) {
+  
+  if(!props.userdata) {
+    return <div>Loading!</div>
+  } else {
+ console.log(props.userdata)
   return (
     <>
       <h3>My Challenges in Process</h3>
@@ -17,7 +22,7 @@ function Homepage() {
       <h3>Categories</h3>
       <Categories/>
     </>
-  );
+  )}
 }
 
 export default Homepage;
