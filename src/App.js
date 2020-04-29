@@ -10,7 +10,7 @@ import randomWhole from "./HelperFunction/helper";
 
 function App() {
   //calling data here
-  
+
   if(!userdata){
     return <div>Loading!</div>
   } else {
@@ -27,7 +27,7 @@ function App() {
           <Route path="/ChallengeDetails">
             <ChallengeDetails />
           </Route>
-          <Route path="/PersonalPage" render={(props) => <PersonalPage />} />
+          <Route path="/PersonalPage" render={(props) => <PersonalPage {...props} />} />
         </Switch>
       </div>
     </BrowserRouter>
