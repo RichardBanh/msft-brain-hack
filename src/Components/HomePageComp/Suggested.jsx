@@ -1,10 +1,18 @@
 import React from "react";
+<<<<<<< HEAD:src/Components/Suggested.jsx
 import Book from "../Assets/Images/SVG/Book.svg";
 // import POne from "../Assets/Images/SVG/Person1.svg";
 // import PTwo from "../Assets/Images/SVG/Person2.svg";
 // import PThree from "../Assets/Images/SVG/Person3.svg";
 // import Plus from "../Assets/Images/SVG/Plus10.svg";
 import All from "../Assets/Images/SVG/AllAvatars.svg";
+=======
+import Book from "../../Assets/Images/SVG/Book.svg";
+import POne from "../../Assets/Images/SVG/Person1.svg";
+import PTwo from "../../Assets/Images/SVG/Person2.svg";
+import PThree from "../../Assets/Images/SVG/Person3.svg";
+import Plus from "../../Assets/Images/SVG/Plus10.svg";
+>>>>>>> origin/master:src/Components/HomePageComp/Suggested.jsx
 
 function Categories() {
   return (

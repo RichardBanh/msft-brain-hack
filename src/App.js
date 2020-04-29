@@ -1,19 +1,26 @@
 import React from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import Homepage from "./Components/Pages/Homepage";
-
-import Header from "./Components/Header";
+import ChallengeDetails from "./Components/Pages/ChallengeDetails"
+import PersonalPage from "./Components/Pages/PersonalPage"
+import Header from "./Components/Header"
 import "./Styles/main.css";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Header />
+        <Header /> 
 
         <Switch>
           <Route exact path="/">
-            <Homepage />
+            <Homepage /> 
+          </Route>
+          <Route path="/ChallengeDetails">
+            <ChallengeDetails/> 
+          </Route>
+          <Route path="/PersonalPage">
+            <PersonalPage/>
           </Route>
         </Switch>
       </div>
@@ -27,3 +34,6 @@ export default App;
 //sorting function?
 //write await?
 // fs.readFile
+//calls user data
+
+//useparams

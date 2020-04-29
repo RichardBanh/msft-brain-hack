@@ -3,6 +3,7 @@
     "name": "Make Dalgona Coffee",
     "ACTIVE":"active",
     "start": "202012",
+    "BannerImg": "",
     "category": [{"0":"Food"}],
     "participants": [
       {

@@ -12,7 +12,7 @@ const Header = () => {
         <Link to="" className="header__right-link">
           <div className="header__right-item">My Challenges</div>
         </Link>
-        <Link to="" className="header__right-link">
+        <Link to="/PersonalPage" className="header__right-link">
           <div className="header__right-item">My Profile</div>
         </Link>
         <Link to="" className="header__right-link">
