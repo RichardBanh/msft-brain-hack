@@ -11,8 +11,8 @@ function MyChallenges() {
       <div className="card">
         <img className="card__image" src={Catnap} alt="Coffee" />
         <div className="card__bottom">
-          <h3 className="card__bottom-title">Sleep at 11:00PM Everyday</h3>
-          <h3 className="card__bottom-ending">Ends in 7 days</h3>
+          <div className="card__bottom-title">Sleep at 11:00PM Everyday</div>
+          <div className="card__bottom-ending">Ends in 7 days</div>
           <img
             className="card__bottom-progress"
             src={Progress}

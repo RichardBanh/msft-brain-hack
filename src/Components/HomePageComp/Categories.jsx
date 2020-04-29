@@ -1,12 +1,12 @@
 import React from "react";
-import Categories from "../../Assets/Images/SVG/Categories.svg";
+import Category from "../../Assets/Images/SVG/Categories.svg";
 
-const BotCategory = () => {
+const Categories = () => {
   return (
     <div className="cat">
-      <img className="cat__image" src={Categories} alt="Categories" />
+      <img className="cat__image" src={Category} alt="Categories" />
     </div>
   );
 };
 
-export default BotCategory;
+export default Categories;
