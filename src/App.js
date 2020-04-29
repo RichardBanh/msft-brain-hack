@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
-import Homepage from "./Components/Pages/Homepage";
-import Categories from "./Components/Categories";
+import Processcards from "./Components/Processcards";
+
 import "./Styles/main.css";
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
             </Link>
           </div>
         </div>
-        <Categories />
+        <Processcards />
         <Switch>
           <Route exact path="/">
             <Homepage />
