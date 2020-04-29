@@ -1,5 +1,19 @@
 <img src="./WebsiteDiagram.svg">
 
+
+
+// This is a web app to get company employees to have a sense of community with well-being projects that co-workers or the company can support or jump on through incentives or encouragement!!
+
+//Does not work currently though.. need to build a database and make the site responsive aswell
+//Would be nice to have an HR user configuration/admin
+
+
+//Team is:
+Richard Banh(WD), Irene Choi(UX), Scott Davidson(WD), 
+Stephen Lee(Data), Tony Li(Data), Sarah McAleese(UX), Janus Tiu(UX)
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
