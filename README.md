@@ -8,7 +8,7 @@
 //Would be nice to have an HR user configuration/admin
 
 
-//Team is:
+//Team Unyte is:
 Richard Banh(WD), Irene Choi(UX), Scott Davidson(WD), 
 Stephen Lee(Data), Tony Li(Data), Sarah McAleese(UX), Janus Tiu(UX)
 
@@ -27,11 +27,24 @@ Stephen Lee(Data), Tony Li(Data), Sarah McAleese(UX), Janus Tiu(UX)
 
 
 
-
-
-
-
-
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
