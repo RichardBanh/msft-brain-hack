@@ -9,11 +9,10 @@ import All from "../Assets/Images/SVG/AllAvatars.svg";
 function Categories() {
   return (
     <>
-      <div className="suggested__title">Suggested Challenges</div>
+      <div className="suggested__title">Popular Challenges</div>
       <div className="suggested">
         <div className="suggested__category">
           <img className="suggested__image" src={Book} alt="Read" />
-          <div className="suggested__category-text">Career</div>
         </div>
         <div className="suggested__bottom">
           <div className="suggested__bottom-text">
