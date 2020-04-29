@@ -4,9 +4,22 @@ export function randomWhole(x, y) {
 }
 
 export function isolatingStrings(object) {
-  const emptyArray = [];
-  for (let [key, value] of Object.entries(object)) {
-    emptyArray.push(value);
-  }
-  return emptyArray
+  const emptyArray = Object.values(object);
+  return emptyArray;
+}
+
+export function filterIt(arr, searchKey) {
+  return arr.filter(function (obj) {
+    return Object.keys(obj).some(function (key) {
+      return obj[key].includes(searchKey);
+    });
+  });
+}
+
+export function searchObj(obj, query) {
+  Object.keys(table).reduce(function(accumulator, currentValue) {
+    if (table[currentValue].col3==='C') accumulator[currentValue] = table[currentValue];
+    return accumulator;
+  }, {});
+  
 }
