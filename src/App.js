@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
-import Categories from "./Components/Categories";
+import Processcards from "./Components/Processcards";
 
 import "./Styles/main.css";
 
@@ -25,7 +25,7 @@ function App() {
             </Link>
           </div>
         </div>
-        <Categories />
+        <Processcards />
         <Switch>
           <Route exact path="/"></Route>
         </Switch>
