@@ -16,10 +16,10 @@ export function filterIt(arr, searchKey) {
   });
 }
 
-export function searchObj(obj, query) {
-  Object.keys(table).reduce(function(accumulator, currentValue) {
-    if (table[currentValue].col3==='C') accumulator[currentValue] = table[currentValue];
-    return accumulator;
-  }, {});
+// export function searchObj(obj, query) {
+//   Object.keys(table).reduce(function(accumulator, currentValue) {
+//     if (table[currentValue].col3==='C') accumulator[currentValue] = table[currentValue];
+//     return accumulator;
+//   }, {});
   
-}
+// }
