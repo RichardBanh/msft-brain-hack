@@ -1,11 +1,13 @@
-import React, { useState, setState, useEffect, Component} from "react";
+import React, { useState, setState, useEffect, Component } from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import Homepage from "./Components/Pages/Homepage";
 import ChallengeDetails from "./Components/Pages/ChallengeDetails";
 import PersonalPage from "./Components/Pages/PersonalPage";
 import Header from "./Components/Header";
 import "./Styles/main.css";
-import userdata from "./Data/user";
+import axios from "axios";
+import { API, password, email } from "./Config/config";
+
 import randomWhole from "./HelperFunction/helper";
 
 // function App() {
@@ -57,8 +59,23 @@ export class App extends Component {
     };
   }
   componentDidMount() {
-    
-    this.setState({ userdata: userdata, username:"janice12"});
+    axios({
+      method: "POST",
+      url: API + "/login",
+      headers: {
+        "Content-Type": "application/json; charset=UTF-8",
+        "Accept": "Token",
+        "Access-Control-Allow-Origin": "*",
+      },
+      data: {
+        email: email,
+        password: password,
+      },
+    }).then((res) => {
+      console.log(res);
+    });
+
+    this.setState({ userdata: "", username: "" });
   }
 
   render() {
@@ -67,21 +84,25 @@ export class App extends Component {
     } else {
       return (
         <BrowserRouter>
-          <div className="App">
+          <div className='App'>
             <Header />
             <Switch>
               <Route
                 exact
-                path="/"
+                path='/'
                 render={(props) => (
-                  <Homepage {...props} userdata={this.state.userdata} username={this.state.username} />
+                  <Homepage
+                    {...props}
+                    userdata={this.state.userdata}
+                    username={this.state.username}
+                  />
                 )}
               />
-              <Route path="/ChallengeDetails">
+              <Route path='/ChallengeDetails'>
                 <ChallengeDetails />
               </Route>
               <Route
-                path="/PersonalPage"
+                path='/PersonalPage'
                 render={(props) => <PersonalPage {...props} />}
               />
             </Switch>
