@@ -24,9 +24,7 @@ export const dataCall = async (method, url, data) => {
     method: method,
     url: API + url,
     headers: {
-      "Content-Type": "application/json; charset=UTF-8",
-      Accept: "Token",
-      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "application/json",
     },
     data: data,
   })

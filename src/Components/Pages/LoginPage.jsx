@@ -11,7 +11,10 @@ class LoginPage extends Component {
   Login = (e) => {
     e.preventDefault();
     console.log(this.state.email, this.state.password);
-    const data = { email: this.state.email, password: this.state.password };
+    const data = {
+      email: this.state.email,
+      password: this.state.password,
+    }
     console.log(data);
     dataCall("POST", "/login", data);
   };
@@ -23,11 +26,11 @@ class LoginPage extends Component {
     return (
       <div className='Modal'>
         <div className='messageofSubmit'></div>
-        <form action=''>
+        <div>
           <input type='text' name='email' id='' onChange={this.Change} />
           <input type='password' name='password' id='' onChange={this.Change} />
           <button onClick={this.Login}>Submit</button>
-        </form>
+        </div>
       </div>
     );
   }
