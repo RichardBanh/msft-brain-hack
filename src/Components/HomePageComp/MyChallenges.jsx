@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Catnap from "../../Assets/Images/SVG/Catnap.svg";
 import Progress from "../../Assets/Images/SVG/Progress.svg";
-import challenges from "../../Data/challenges.json";
+
 import { isolatingStrings, filterIt } from "../../HelperFunction/helper";
 
 
