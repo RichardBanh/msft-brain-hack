@@ -6,17 +6,24 @@ import { dataCall } from "../../HelperFunction/helper";
 class LoginPage extends Component {
   constructor(props) {
     super(props);
-    this.state = { email: "", password: "" };
+    this.state = { email: "", password: "", message: "" };
   }
-  Login = (e) => {
+  Login = async (e) => {
     e.preventDefault();
     console.log(this.state.email, this.state.password);
+    const report = { success: null, error: null };
     const data = {
       email: this.state.email,
       password: this.state.password,
-    }
+    };
     console.log(data);
-    dataCall("POST", "/login", data);
+    await dataCall("POST", "/login", data, report);
+    console.log(report);
+    if (report.success === true) {
+      this.props.setUsername(this.state.email);
+    } else {
+      this.setState({ message: report.error });
+    }
   };
 
   Change = (e) => {
@@ -24,11 +31,11 @@ class LoginPage extends Component {
   };
   render() {
     return (
-      <div className='Modal'>
-        <div className='messageofSubmit'></div>
+      <div className="Modal">
+        <div className="messageofSubmit">{this.state.message}</div>
         <div>
-          <input type='text' name='email' id='' onChange={this.Change} />
-          <input type='password' name='password' id='' onChange={this.Change} />
+          <input type="text" name="email" id="" onChange={this.Change} />
+          <input type="password" name="password" id="" onChange={this.Change} />
           <button onClick={this.Login}>Submit</button>
         </div>
       </div>

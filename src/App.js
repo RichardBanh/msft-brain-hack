@@ -21,10 +21,12 @@ export class App extends Component {
   componentDidMount() {
     this.setState({ userdata: "", username: "" });
   }
-
+  setUsername(username){
+    this.setState({username:username})
+  }
   render() {
-    if (!this.state.userdata) {
-      return <LoginPage />;
+    if (!this.state.username) {
+      return <LoginPage setUsername={this.setUsername.bind(this)}/>;
     } else {
       return (
         <BrowserRouter>

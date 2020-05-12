@@ -19,7 +19,7 @@ export function filterIt(arr, searchKey) {
   });
 }
 
-export const dataCall = async (method, url, data) => {
+export const dataCall = async (method, url, data, report) => {
   await axios({
     method: method,
     url: API + url,
@@ -29,11 +29,13 @@ export const dataCall = async (method, url, data) => {
     withCredentials: true,
     data: data,
   })
-    .then((res) => {
-      console.log(document.cookie);
+    .then(() => {
+      report.success = true;
+      console.log(report);
     })
     .catch((error) => {
-      console.log(error.response.data);
+      console.log(error.response.data.whathappened);
+      report.error = error.response.data.whathappened;
     });
 };
 
