@@ -7,7 +7,6 @@ import Header from "./Components/Header";
 import LoginPage from "./Components/Pages/LoginPage";
 import "./Styles/main.css";
 
-
 import randomWhole from "./HelperFunction/helper";
 
 export class App extends Component {
@@ -21,12 +20,12 @@ export class App extends Component {
   componentDidMount() {
     this.setState({ userdata: "", username: "" });
   }
-  setUsername(username){
-    this.setState({username:username})
+  setUsername(username) {
+    this.setState({ username: username });
   }
   render() {
     if (!this.state.username) {
-      return <LoginPage setUsername={this.setUsername.bind(this)}/>;
+      return <LoginPage setUsername={this.setUsername.bind(this)} />;
     } else {
       console.log(document.cookie)
       return (
@@ -59,11 +58,3 @@ export class App extends Component {
   }
 }
 export default App;
-
-//code snippet for writing data
-//sorting function?
-//write await?
-// fs.readFile
-//calls user data
-
-//useparams

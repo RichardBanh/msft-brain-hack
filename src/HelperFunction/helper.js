@@ -1,3 +1,4 @@
+
 import axios from "axios";
 import { API, password, email } from "../Config/config";
 
@@ -38,11 +39,3 @@ export const dataCall = async (method, url, data, report) => {
       report.error = error.response.data.whathappened;
     });
 };
-
-// export function searchObj(obj, query) {
-//   Object.keys(table).reduce(function(accumulator, currentValue) {
-//     if (table[currentValue].col3==='C') accumulator[currentValue] = table[currentValue];
-//     return accumulator;
-//   }, {});
-
-// }
