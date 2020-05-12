@@ -16,9 +16,7 @@ class LoginPage extends Component {
       email: this.state.email,
       password: this.state.password,
     };
-    console.log(data);
     await dataCall("POST", "/login", data, report);
-    console.log(report);
     if (report.success === true) {
       this.props.setUsername(this.state.email);
     } else {

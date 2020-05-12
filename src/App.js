@@ -28,6 +28,7 @@ export class App extends Component {
     if (!this.state.username) {
       return <LoginPage setUsername={this.setUsername.bind(this)}/>;
     } else {
+      console.log(document.cookie)
       return (
         <BrowserRouter>
           <div className='App'>
@@ -39,7 +40,6 @@ export class App extends Component {
                 render={(props) => (
                   <Homepage
                     {...props}
-                    userdata={this.state.userdata}
                     username={this.state.username}
                   />
                 )}
