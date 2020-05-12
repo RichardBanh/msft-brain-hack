@@ -26,10 +26,11 @@ export const dataCall = async (method, url, data) => {
     headers: {
       "Content-Type": "application/json",
     },
+    withCredentials: true,
     data: data,
   })
     .then((res) => {
-      console.log(res.json);
+      console.log(document.cookie);
     })
     .catch((error) => {
       console.log(error.response.data);
