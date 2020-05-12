@@ -23,13 +23,14 @@ export const dataCall = async (method, url, data) => {
   await axios({
     method: method,
     url: API + url,
+    withCredentials: true,
     headers: {
       "Content-Type": "application/json",
     },
     data: data,
   })
     .then((res) => {
-      console.log(res.json);
+      console.log(res.cookie);
     })
     .catch((error) => {
       console.log(error.response.data);
