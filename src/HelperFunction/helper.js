@@ -1,3 +1,4 @@
+
 import axios from "axios";
 import { API, password, email } from "../Config/config";
 
@@ -19,28 +20,22 @@ export function filterIt(arr, searchKey) {
   });
 }
 
-export const dataCall = async (method, url, data) => {
+export const dataCall = async (method, url, data, report) => {
   await axios({
     method: method,
     url: API + url,
-    withCredentials: true,
     headers: {
       "Content-Type": "application/json",
     },
+    withCredentials: true,
     data: data,
   })
-    .then((res) => {
-      console.log(res.cookie);
+    .then(() => {
+      report.success = true;
+      console.log(report);
     })
     .catch((error) => {
-      console.log(error.response.data);
+      console.log(error.response.data.whathappened);
+      report.error = error.response.data.whathappened;
     });
 };
-
-// export function searchObj(obj, query) {
-//   Object.keys(table).reduce(function(accumulator, currentValue) {
-//     if (table[currentValue].col3==='C') accumulator[currentValue] = table[currentValue];
-//     return accumulator;
-//   }, {});
-
-// }
