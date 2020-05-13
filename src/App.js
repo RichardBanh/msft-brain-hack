@@ -15,39 +15,40 @@ export class App extends Component {
     this.state = {
       userdata: "",
       username: null,
+      token: null,
     };
   }
   componentDidMount() {
-    this.setState({ userdata: "", username: "" });
+    this.setState({ token: !!localStorage.getItem("token") });
   }
   setUsername(username) {
     this.setState({ username: username });
   }
+  setToken(){
+    this.setState({token: true})
+  }
   render() {
-    if (!this.state.username) {
-      return <LoginPage setUsername={this.setUsername.bind(this)} />;
+    if (!this.state.token) {
+      return <LoginPage setUsername={this.setUsername.bind(this)} setToken={this.setToken.bind(this)} />;
     } else {
-      console.log(document.cookie)
+      console.log(document.cookie);
       return (
         <BrowserRouter>
-          <div className='App'>
+          <div className="App">
             <Header />
             <Switch>
               <Route
                 exact
-                path='/'
+                path="/"
                 render={(props) => (
-                  <Homepage
-                    {...props}
-                    username={this.state.username}
-                  />
+                  <Homepage {...props} username={this.state.username} />
                 )}
               />
-              <Route path='/ChallengeDetails'>
+              <Route path="/ChallengeDetails">
                 <ChallengeDetails />
               </Route>
               <Route
-                path='/PersonalPage'
+                path="/PersonalPage"
                 render={(props) => <PersonalPage {...props} />}
               />
             </Switch>

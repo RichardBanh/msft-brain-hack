@@ -30,8 +30,10 @@ export const dataCall = async (method, url, data, report) => {
     withCredentials: true,
     data: data,
   })
-    .then(() => {
+    .then((res) => {
+      console.log(res)
       report.success = true;
+      report.data = res.data
       console.log(report);
     })
     .catch((error) => {

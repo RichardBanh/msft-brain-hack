@@ -11,7 +11,7 @@ class LoginPage extends Component {
   Login = async (e) => {
     e.preventDefault();
     console.log(this.state.email, this.state.password);
-    const report = { success: null, error: null };
+    const report = { success: null, error: null, data: null };
     const data = {
       email: this.state.email,
       password: this.state.password,
@@ -19,6 +19,8 @@ class LoginPage extends Component {
     await dataCall("POST", "/login", data, report);
     if (report.success === true) {
       this.props.setUsername(this.state.email);
+      localStorage.setItem("token", report.data.token);
+      this.props.setToken();
     } else {
       this.setState({ message: report.error });
     }
