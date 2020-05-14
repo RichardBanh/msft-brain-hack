@@ -20,7 +20,7 @@ class LoginPage extends Component {
     if (report.success === true) {
       this.props.setUsername(this.state.email);
       localStorage.setItem("token", report.data.token);
-      this.props.setToken();
+      this.props.setToken(true);
     } else {
       this.setState({ message: report.error });
     }

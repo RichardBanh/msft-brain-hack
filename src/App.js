@@ -24,18 +24,22 @@ export class App extends Component {
   setUsername(username) {
     this.setState({ username: username });
   }
-  setToken(){
-    this.setState({token: true})
+  setToken(trueorfalse) {
+    this.setState({ token: trueorfalse });
   }
   render() {
     if (!this.state.token) {
-      return <LoginPage setUsername={this.setUsername.bind(this)} setToken={this.setToken.bind(this)} />;
+      return (
+        <LoginPage
+          setUsername={this.setUsername.bind(this)}
+          setToken={this.setToken.bind(this)}
+        />
+      );
     } else {
-      console.log(document.cookie);
       return (
         <BrowserRouter>
           <div className="App">
-            <Header />
+            <Header setToken={this.setToken.bind(this)} />
             <Switch>
               <Route
                 exact
