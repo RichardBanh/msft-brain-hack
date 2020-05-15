@@ -4,24 +4,38 @@ import MyChallenges from "../HomePageComp/MyChallenges";
 import Suggested from "../HomePageComp/Suggested";
 import Popular from "../HomePageComp/PopularSelct";
 import Categories from "../HomePageComp/Categories";
+import Hero from "../HomePageComp/Hero";
+import { dataCall } from "../../HelperFunction/helper";
+import { useEffect } from "react";
 
 function Homepage(props) {
-  
-  if(!props.userdata) {
-    return <div>Loading!</div>
+  const [userLoginData, setData] = useState(null);
+  useEffect(() => {
+    console.log("use effect ran");
+    const report = { success: null, error: null, data: null };
+    async function datawait() {
+      const returnData = await dataCall("GET", "/user", "", report);
+      console.log("returnData");
+    }
+    datawait();
+  }, []);
+  if (!props.userdata) {
+    return <div>Loading!</div>;
   } else {
-  return (
-    <>
-      <h3>My Challenges in Process</h3>
-      <MyChallenges userdata={props.userdata} />
-      <h3>Suggested Challenges</h3>
-      <Suggested />
-      <div className="suggested__title">Popular Challenges</div>
-      <Popular />
-      <div className="cat__title">Categories</div>
-      <Categories />
-    </>
-  )}
+    return (
+      <>
+        <Hero />
+        <h3>My Challenges in Process</h3>
+        <MyChallenges userdata={props.userdata} />
+        <h3>Suggested Challenges</h3>
+        <Suggested />
+        <div className="suggested__title">Popular Challenges</div>
+        <Popular />
+        <div className="cat__title">Categories</div>
+        <Categories />
+      </>
+    );
+  }
 }
 
 export default Homepage;

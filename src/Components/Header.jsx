@@ -9,7 +9,7 @@ const Header = (props) => {
     await dataCall("POST", "/logout", "", report);
     if (report.success === true) {
       localStorage.clear();
-      props.setToken(false)
+      props.setToken(false);
     }
   }
   return (

@@ -10,7 +10,6 @@ class LoginPage extends Component {
   }
   Login = async (e) => {
     e.preventDefault();
-    console.log(this.state.email, this.state.password);
     const report = { success: null, error: null, data: null };
     const data = {
       email: this.state.email,
@@ -20,6 +19,7 @@ class LoginPage extends Component {
     if (report.success === true) {
       this.props.setUsername(this.state.email);
       localStorage.setItem("token", report.data.token);
+      localStorage.setItem("email", this.state.email)
       this.props.setToken(true);
     } else {
       this.setState({ message: report.error });

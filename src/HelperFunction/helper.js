@@ -1,4 +1,3 @@
-
 import axios from "axios";
 import { API, password, email } from "../Config/config";
 
@@ -31,13 +30,17 @@ export const dataCall = async (method, url, data, report) => {
     data: data,
   })
     .then((res) => {
-      console.log(res)
+      console.log(res);
       report.success = true;
-      report.data = res.data
+      report.data = res.data;
       console.log(report);
     })
     .catch((error) => {
-      console.log(error.response.data.whathappened);
-      report.error = error.response.data.whathappened;
+      if (error.response === undefined) {
+        console.log(error);
+      } else {
+        console.log(error.response.data.whathappened);
+        report.error = error.response.data.whathappened;
+      }
     });
 };
