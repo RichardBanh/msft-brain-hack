@@ -19,6 +19,9 @@ export function filterIt(arr, searchKey) {
   });
 }
 
+
+///should properly return something
+
 export const dataCall = async (method, url, data, report) => {
   await axios({
     method: method,

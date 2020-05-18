@@ -10,10 +10,10 @@ function MyChallenges(props) {
   if (!props) {
     return <div>Loading!</div>;
   } else {
-    const userdata = props.userdata.janice12;
-    console.log(userdata);
-    const whattosearch = [...isolatingStrings(userdata.ActiveChallenges)];
-    console.log(whattosearch)
+    // const userdata = props.userdata.janice12;
+    // console.log(userdata);
+    // const whattosearch = [...isolatingStrings(userdata.ActiveChallenges)];
+    // console.log(whattosearch)
     
 
     // const cardPopulated = props.userdata.map((x) => (

@@ -11,22 +11,22 @@ import { useEffect } from "react";
 function Homepage(props) {
   const [userLoginData, setData] = useState(null);
   useEffect(() => {
-    console.log("use effect ran");
     const report = { success: null, error: null, data: null };
     async function datawait() {
       const returnData = await dataCall("GET", "/user", "", report);
-      console.log("returnData");
+      console.log(report.data);
+      setData(report.data)
     }
     datawait();
   }, []);
-  if (!props.userdata) {
+  if (!userLoginData) {
     return <div>Loading!</div>;
   } else {
     return (
       <>
         <Hero />
         <h3>My Challenges in Process</h3>
-        <MyChallenges userdata={props.userdata} />
+        <MyChallenges userdata={userLoginData} />
         <h3>Suggested Challenges</h3>
         <Suggested />
         <div className="suggested__title">Popular Challenges</div>
