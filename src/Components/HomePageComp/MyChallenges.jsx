@@ -2,19 +2,30 @@ import React, { useState } from "react";
 import Catnap from "../../Assets/Images/SVG/Catnap.svg";
 import Progress from "../../Assets/Images/SVG/Progress.svg";
 
-import { isolatingStrings, filterIt } from "../../HelperFunction/helper";
+import { isolatingStrings, filterIt, dataCall } from "../../HelperFunction/helper";
+import { useEffect } from "react";
 
 
+// need to do axios call for the active challenges
 
 function MyChallenges(props) {
+  const [userActivities, setActivity] = useState(null);
+  useEffect(() => {
+    const report = { success: null, error: null, data: null };
+    async function datawait() {
+      const returnData = await dataCall("GET","/activity", props.userdata.data.activeChallenges, report)
+      setActivity(report.data)
+    }
+    datawait()
+  }, []);
   if (!props) {
     return <div>Loading!</div>;
   } else {
+    console.log(props.userdata.data.activeChallenges);
     // const userdata = props.userdata.janice12;
     // console.log(userdata);
     // const whattosearch = [...isolatingStrings(userdata.ActiveChallenges)];
     // console.log(whattosearch)
-    
 
     // const cardPopulated = props.userdata.map((x) => (
     //   <div className="card">
@@ -32,7 +43,6 @@ function MyChallenges(props) {
     // ));
     // return { cardPopulated };
     return <div>blah</div>;
-
   }
 }
 
