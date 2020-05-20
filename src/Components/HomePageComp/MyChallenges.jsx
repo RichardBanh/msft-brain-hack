@@ -10,18 +10,20 @@ import { useEffect } from "react";
 
 function MyChallenges(props) {
   const [userActivities, setActivity] = useState(null);
+  console.log(props.userdata.data.activeChallenges);
   useEffect(() => {
     const report = { success: null, error: null, data: null };
     async function datawait() {
-      const returnData = await dataCall("GET","/activity", props.userdata.data.activeChallenges, report)
+      const returnData = await dataCall("POST","/activity", props.userdata.data.activeChallenges, report)
       setActivity(report.data)
+      console.log(report.data)
     }
     datawait()
   }, []);
   if (!props) {
     return <div>Loading!</div>;
   } else {
-    console.log(props.userdata.data.activeChallenges);
+    // console.log(props.userdata.data.activeChallenges);
     // const userdata = props.userdata.janice12;
     // console.log(userdata);
     // const whattosearch = [...isolatingStrings(userdata.ActiveChallenges)];
