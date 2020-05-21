@@ -15,7 +15,7 @@ function Homepage(props) {
     async function datawait() {
       const returnData = await dataCall("GET", "/user", "", report);
       console.log(report.data);
-      setData(report.data)
+      setData(report.data);
     }
     datawait();
   }, []);
