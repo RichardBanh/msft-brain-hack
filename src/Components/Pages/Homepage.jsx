@@ -8,13 +8,14 @@ import Hero from "../HomePageComp/Hero";
 import { dataCall } from "../../HelperFunction/helper";
 import { useEffect } from "react";
 
+
+
 function Homepage(props) {
   const [userLoginData, setData] = useState(null);
   useEffect(() => {
     const report = { success: null, error: null, data: null };
     async function datawait() {
       const returnData = await dataCall("GET", "/user", "", report);
-      console.log(report.data);
       setData(report.data);
     }
     datawait();
