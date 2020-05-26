@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Catnap from "../../Assets/Images/SVG/Catnap.svg";
+
 import { dataCall } from "../../HelperFunction/helper";
 import { useEffect } from "react";
 import Card from "../Card";
@@ -48,7 +48,7 @@ function MyChallenges(props) {
     console.log(userActivities)
     return (
       
-      <div>
+      <div className="challenges">
         {userActivities.map((activity, index) => (
           <Card key={index} activity={activity} username={username} />
         ))}
