@@ -64,11 +64,18 @@
 }
 
 .card {
-  width: 25rem;
-  height: 20.625rem;
+  width: 24rem;
+  height: 20.7rem;
   background-color: #d6efff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 12px;
-  border-radius: 2rem;
+  border-radius: 1.3rem;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -84,7 +91,7 @@
 }
 
 .card__image {
-  width: 400px;
+  width: 384px;
   height: 210px;
   left: 520px;
   top: 670px;
@@ -105,35 +112,16 @@
 
 .card__bottom-ending {
   color: #009ffd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .card__bottom-progress {
-  margin: 1rem 0 1.125rem;
-}
-
-.meter {
-  height: 25px;
-  /* Can be anything */
-  position: relative;
-  background: #555;
-  border-radius: 25px;
-  padding: 10px;
-}
-
-.meter > span {
-  display: block;
-  height: 100%;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  background-color: #2bc253;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(37%, #2bc253), color-stop(69%, #54f054));
-  background-image: linear-gradient(#2bc253 37%, #54f054 69%);
-  -webkit-box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3), inset 0 -2px 6px rgba(0, 0, 0, 0.4);
-          box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3), inset 0 -2px 6px rgba(0, 0, 0, 0.4);
-  position: relative;
-  overflow: hidden;
+  margin-top: 5px;
+  height: 3px;
+  border-radius: 20px;
+  background-color: green;
 }
 
 .suggested {

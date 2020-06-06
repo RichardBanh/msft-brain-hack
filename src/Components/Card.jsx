@@ -11,9 +11,7 @@ function Card(props) {
           {activity.name ? activity.name : "not found"}
         </h3>
         <h3 className="card__bottom-ending">Ends in 7 days</h3>
-        <div className="meter">
-          <span style={{ width: `${activity.progress}` }} />
-        </div>
+        <div className="card__bottom-progress" style={{ width: `${activity.progress}` }} ></div>
       </div>
     </div>
   );

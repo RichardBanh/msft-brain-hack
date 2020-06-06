@@ -33,10 +33,8 @@ export const dataCall = async (method, url, data, report) => {
     data: data,
   })
     .then((res) => {
-      console.log(res);
       report.success = true;
       report.data = res.data;
-      console.log(report);
     })
     .catch((error) => {
       if (error.response === undefined) {
