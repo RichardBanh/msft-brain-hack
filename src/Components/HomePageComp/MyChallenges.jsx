@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { dataCall } from "../../HelperFunction/helper";
+import { dataCall, scroll } from "../../HelperFunction/helper";
 import { useEffect } from "react";
 import Card from "../Card";
 
@@ -39,19 +39,29 @@ function MyChallenges(props) {
       );
       setActivity(sortAct(report.data.data));
     }
-   
+
     datawait();
   }, []);
   if (userActivities === null || !username) {
     return <div>Loading</div>;
   } else {
-    console.log(userActivities)
     return (
-      
       <div className="challenges">
+        <button
+          className="left"
+          onClick={(e) => scroll( e, "left", ".challenges")}
+        >
+          <img src="" alt="" />
+        </button>
         {userActivities.map((activity, index) => (
           <Card key={index} activity={activity} username={username} />
         ))}
+        <button
+          className="right"
+          onClick={(e) => scroll(e, "right", ".challenges")}
+        >
+          <img src="" alt="" />
+        </button>
       </div>
     );
   }

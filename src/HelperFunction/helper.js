@@ -19,6 +19,13 @@ export function filterIt(arr, searchKey) {
   });
 }
 
+export function scroll(e, pos, parent) {
+  if (pos === "right") {
+    document.querySelector(parent).scrollLeft +=20
+  } else if (pos === "left") {
+    document.querySelector(parent).scrollLeft -=20
+  }
+}
 
 ///should properly return something
 

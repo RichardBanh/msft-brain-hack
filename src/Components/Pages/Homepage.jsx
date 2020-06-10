@@ -5,7 +5,7 @@ import Suggested from "../HomePageComp/Suggested";
 import Popular from "../HomePageComp/PopularSelct";
 import Categories from "../HomePageComp/Categories";
 import Hero from "../HomePageComp/Hero";
-import { dataCall } from "../../HelperFunction/helper";
+import { dataCall} from "../../HelperFunction/helper";
 import { useEffect } from "react";
 
 

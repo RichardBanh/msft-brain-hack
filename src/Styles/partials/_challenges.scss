@@ -1,6 +1,22 @@
 .challenges{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     width: 90%;
-    overflow-x: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    box-sizing: content-box;
+    height: 280px;
+} .challenges::-webkit-scrollbar {
+    background: transparent;
+} ::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+.left {
+    position: absolute;
+}
+
+.right {
+    position: absolute;
+    right: 0%;
 }
