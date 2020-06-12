@@ -3,7 +3,8 @@ import React, { useState } from "react";
 import { dataCall, scroll } from "../../HelperFunction/helper";
 import { useEffect } from "react";
 import Card from "../Card";
-
+import leftArrow from "../../Assets/Images/SVG/leftArrow.svg"
+import rightArrow from "../../Assets/Images/SVG/rightArrow.svg"
 // sort data here!!!!!!
 // sort into array and push into state then down to props
 //need activityname
@@ -47,21 +48,21 @@ function MyChallenges(props) {
   } else {
     return (
       <div className="challenges">
-        <button
-          className="left"
-          onClick={(e) => scroll( e, "left", ".challenges")}
+        <div
+          className="left bounce-4"
+          onClick={(e) => scroll(e, "left", ".challenges")}
         >
-          <img src="" alt="" />
-        </button>
+          <img src={leftArrow} alt="" />
+        </div>
+        <div
+          className="right bounce-4"
+          onClick={(e) => scroll(e, "right", ".challenges")}
+        >
+          <img src={rightArrow} alt="" />
+        </div>
         {userActivities.map((activity, index) => (
           <Card key={index} activity={activity} username={username} />
         ))}
-        <button
-          className="right"
-          onClick={(e) => scroll(e, "right", ".challenges")}
-        >
-          <img src="" alt="" />
-        </button>
       </div>
     );
   }

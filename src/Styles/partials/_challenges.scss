@@ -1,22 +1,50 @@
-.challenges{
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    box-sizing: content-box;
-    height: 280px;
-} .challenges::-webkit-scrollbar {
-    background: transparent;
-} ::-webkit-scrollbar-thumb {
-    background: #FF0000;
+.challenges {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  box-sizing: content-box;
+  height: 290px;
+  scroll-behavior: smooth;
+}
+.challenges::-webkit-scrollbar {
+  background: transparent;
 }
 
 .left {
-    position: absolute;
+  position: absolute;
+  top:20%;
+  border:none;
 }
 
 .right {
-    position: absolute;
-    right: 0%;
+  position: absolute;
+  right: 12%;
+  top:20%;
+  border:none;
+}
+
+.left:hover {
+  background-color: whitesmoke ;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.right:hover{
+  background-color: whitesmoke;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.bounce-4 {
+  animation-name: bounce-4;
+  animation-timing-function: ease;
+}
+
+@keyframes bounce-4 {
+  0%   { transform: scale(1,1)}
+  10%  { transform: scale(1.1,.9)}
+  30%  { transform: scale(.9,1.1)}
+  50%  { transform: scale(1,1)}
+  100% { transform: scale(1,1)}
 }

@@ -225,28 +225,98 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 90%;
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
-  height: 280px;
+  height: 290px;
+  scroll-behavior: smooth;
 }
 
 .challenges::-webkit-scrollbar {
   background: transparent;
 }
 
-::-webkit-scrollbar-thumb {
-  background: #FF0000;
-}
-
 .left {
   position: absolute;
+  top: 20%;
+  border: none;
 }
 
 .right {
   position: absolute;
-  right: 0%;
+  right: 12%;
+  top: 20%;
+  border: none;
+}
+
+.left:hover {
+  background-color: whitesmoke;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.right:hover {
+  background-color: whitesmoke;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.bounce-4 {
+  -webkit-animation-name: bounce-4;
+          animation-name: bounce-4;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
+
+@-webkit-keyframes bounce-4 {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  10% {
+    -webkit-transform: scale(1.1, 0.9);
+            transform: scale(1.1, 0.9);
+  }
+  30% {
+    -webkit-transform: scale(0.9, 1.1);
+            transform: scale(0.9, 1.1);
+  }
+  50% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+@keyframes bounce-4 {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  10% {
+    -webkit-transform: scale(1.1, 0.9);
+            transform: scale(1.1, 0.9);
+  }
+  30% {
+    -webkit-transform: scale(0.9, 1.1);
+            transform: scale(0.9, 1.1);
+  }
+  50% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
 }
 
 body {
