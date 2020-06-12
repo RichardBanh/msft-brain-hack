@@ -49,13 +49,13 @@ function MyChallenges(props) {
     return (
       <div className="challenges">
         <div
-          className="left bounce-4"
+          className="left bounce-l"
           onClick={(e) => scroll(e, "left", ".challenges")}
         >
           <img src={leftArrow} alt="" />
         </div>
         <div
-          className="right bounce-4"
+          className="right bounce-r"
           onClick={(e) => scroll(e, "right", ".challenges")}
         >
           <img src={rightArrow} alt="" />
